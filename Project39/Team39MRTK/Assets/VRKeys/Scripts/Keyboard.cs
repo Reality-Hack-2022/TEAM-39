@@ -613,22 +613,27 @@ namespace VRKeys {
 				placeholder.gameObject.SetActive (false);
 			}
 		}
-		public void IndicatePress(int finger)
+		public void IndicatePress(int finger, bool left, bool right)
 		{
 			KeyGroup keyGroup = KeyGroup.Default;
 			switch (finger)
 			{
 				case 0:
-					keyGroup = KeyGroup.BlueLeft;
+					if (right) keyGroup = KeyGroup.BlueRight;
+					else keyGroup = KeyGroup.BlueLeft;
 					break;
 				case 1:
-					keyGroup = KeyGroup.GreenLeft;
+					if (right) keyGroup = KeyGroup.GreenRight;
+					else if (left) keyGroup = KeyGroup.GreenLeft;
+					else keyGroup = KeyGroup.GreenMiddle;
 					break;
 				case 2:
-					keyGroup = KeyGroup.RedLeft;
+					if (right) keyGroup = KeyGroup.RedRight;
+					else keyGroup = KeyGroup.RedLeft;
 					break;
 				case 3:
-					keyGroup = KeyGroup.YellowLeft;
+					if (right) keyGroup = KeyGroup.YellowRight;
+					else keyGroup = KeyGroup.YellowLeft;
 					break;
 				default:
 					break;
@@ -640,9 +645,10 @@ namespace VRKeys {
 			{
 				if (key.keyGroup == keyGroup) {
 					key.Indicate(true);
-					currentKeyGroup = keyGroup;
 				}
 			}
+			currentKeyGroup = keyGroup;
+			Debug.Log("Key group " + currentKeyGroup);
 		}
 		/*
 		public void IndicatePress() {
@@ -656,23 +662,32 @@ namespace VRKeys {
 		public void IndicateRelease() {
 			Debug.Log($"Indicate release! " + keys.Length.ToString());
 			foreach (LetterKey key in keys) {
-				if (key.keyGroup == currentKeyGroup) {
+				//if (key.keyGroup == currentKeyGroup) {
 					key.Indicate(false);
-				}
+				//}
 			}
 			currentKeyGroup = KeyGroup.Default;
 		}
 
 		public void IndicateRowPress(int finger) {
+			Debug.Log("key group now is " + currentKeyGroup.ToString());
 
+			if (finger == 4 && currentRow != finger + 5)
+            {
+				AddCharacter(" ");
+            }
 			foreach (LetterKey key in keys) {
-				if (key.keyGroup == currentKeyGroup && key.keyRow == finger - 5) key.IndicatePress(true);
+				if (key.isIndicating && key.keyRow == (finger - 5))
+				{
+					Debug.Log("Key " + (finger - 5).ToString() + " press!");
+					key.IndicatePress(true);
+				}
 			}
 			currentRow = finger - 5;
 		}
 		public void IndicateRowRelease() {
 			foreach (LetterKey key in keys) {
-				if (key.keyGroup == currentKeyGroup && key.keyRow == currentRow) {
+				if (key.isIndicating && key.keyRow == currentRow) {
 					key.IndicatePress(false);
 					AddCharacter (key.label.text);
 				}

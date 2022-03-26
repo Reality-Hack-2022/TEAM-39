@@ -10,16 +10,8 @@ namespace DyiPinchGrab
 {
     public class DyiHandManipulation : MonoBehaviour
     {
-        /*
-        [SerializeField]
-        private TrackedHandJoint trackedHandJoint = TrackedHandJoint.IndexMiddleJoint;
+        MixedRealityPose pose;
 
-        [SerializeField]
-        private float grabDistance = 0.1f;
-
-        [SerializeField]
-        private Handedness trackedHand = Handedness.Both;
-        */
         private Handedness leftHand = Handedness.Left;
         private Handedness rightHand = Handedness.Right;
         public Keyboard keyboard;
@@ -30,23 +22,11 @@ namespace DyiPinchGrab
         int lastRightFinger = -1;
         int rightFingerFrameCount = 0;
 
-        /*
-        [SerializeField]
-        private bool trackPinch = true;
+        float firstLeftFingerPos = 0.0f;
 
-        [SerializeField]
-        private bool trackGrab = true;
+        bool leftGesture = false;
+        bool rightGesture = false;
 
-        private IMixedRealityHandJointService handJointService;
-
-        private IMixedRealityHandJointService HandJointService =>
-            handJointService ??
-            (handJointService = CoreServices.GetInputSystemDataProvider<IMixedRealityHandJointService>());
-
-        private MixedRealityPose? previousLeftHandPose;
-
-        private MixedRealityPose? previousRightHandPose;
-        */
         [SerializeField]
         public UnityEvent leftIndex;
         private void Update()
@@ -61,7 +41,7 @@ namespace DyiPinchGrab
             int maxLeftFinger = -1;
             int maxRightFinger = -1;
 
-
+            
             fingerCurls[0] = HandPoseUtils.IndexFingerCurl(leftHand);
             fingerCurls[1] = HandPoseUtils.MiddleFingerCurl(leftHand);
             fingerCurls[2] = HandPoseUtils.RingFingerCurl(leftHand);
@@ -126,10 +106,29 @@ namespace DyiPinchGrab
             // if left hand pinching and 15 frames have passed since pinching, then indicate
             if (maxLeftFinger >= 0)
             {
-                if (leftFingerFrameCount >= 15)
+                if (leftFingerFrameCount == 15)
                 {
                     // moves up column
-                    keyboard.IndicatePress(maxLeftFinger);
+                    keyboard.IndicatePress(maxLeftFinger, false, false);
+
+                    if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Left, out pose))
+                    {
+                        firstLeftFingerPos = pose.Position.x;
+                    }
+                } else if (leftFingerFrameCount > 15)
+                {
+                    if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Left, out pose))
+                    {
+                        if ((pose.Position.x - firstLeftFingerPos) > 0.1 && !rightGesture) {
+                            keyboard.IndicateRelease();
+                            keyboard.IndicatePress(maxLeftFinger, false, true);
+                            rightGesture = true;
+                        } else if ((pose.Position.x - firstLeftFingerPos) < -0.1 && !leftGesture) {
+                            keyboard.IndicateRelease();
+                            keyboard.IndicatePress(maxLeftFinger, true, false);
+                            leftGesture = true;
+                        }
+                    }
                 }
             } else
             {
@@ -140,6 +139,9 @@ namespace DyiPinchGrab
                     {
                         Debug.Log("no curl");
                         keyboard.IndicateRelease();
+                        leftGesture = false;
+                        rightGesture = false;
+                        firstLeftFingerPos = 0.0f;
                     }
                 } else
                 {
@@ -150,10 +152,11 @@ namespace DyiPinchGrab
 
             if (maxRightFinger >= 0)
             {
-                if (rightFingerFrameCount >= 15)
+                if (rightFingerFrameCount == 15)
                 {
                     // if column indicated, indicate row
                     keyboard.IndicateRowPress(maxRightFinger);
+                    Debug.Log("indicate finger" + maxRightFinger);
                 }
             }
             else
@@ -175,72 +178,6 @@ namespace DyiPinchGrab
                 }
             }
 
-
-
-            /*
-            var leftHandPose = GetHandPose(Handedness.Left, previousLeftHandPose != null);
-            var rightHandPose = GetHandPose(Handedness.Right, previousRightHandPose != null);
-            {
-                var jointTransform = HandJointService.RequestJointTransform(trackedHandJoint, trackedHand);
-                if (rightHandPose != null && previousRightHandPose != null)
-                {
-                    if (leftHandPose != null && previousLeftHandPose != null)
-                    {
-                        // fight! pick the closest one
-                        var isRightCloser = Vector3.Distance(rightHandPose.Value.Position, jointTransform.position) <
-                                            Vector3.Distance(leftHandPose.Value.Position, jointTransform.position);
-
-                        ProcessPoseChange(
-                            isRightCloser ? previousRightHandPose : previousLeftHandPose,
-                            isRightCloser ? rightHandPose : leftHandPose);
-                    }
-                    else
-                    {
-                        ProcessPoseChange(previousRightHandPose, rightHandPose);
-                    }
-                }
-                else if (leftHandPose != null && previousLeftHandPose != null)
-                {
-                    ProcessPoseChange(previousLeftHandPose, leftHandPose);
-                }
-            }
-            previousLeftHandPose = leftHandPose;
-            previousRightHandPose = rightHandPose;
-            */
         }
-        /*
-        private MixedRealityPose? GetHandPose(Handedness hand, bool hasBeenGrabbed)
-        {
-            if ((trackedHand & hand) == hand)
-            {
-                if (HandJointService.IsHandTracked(hand) &&
-                    ((GestureUtils.IsPinching(hand) && trackPinch) ||
-                     (GestureUtils.IsGrabbing(hand) && trackGrab)))
-                {
-                    var jointTransform = HandJointService.RequestJointTransform(trackedHandJoint, hand);
-                    var palmTransForm = HandJointService.RequestJointTransform(TrackedHandJoint.Palm, hand);
-                    Debug.Log("Index " + HandPoseUtils.RingFingerCurl(leftHand));
-
-                    if (hasBeenGrabbed ||
-                       Vector3.Distance(gameObject.transform.position, jointTransform.position) <= grabDistance)
-                    {
-
-                        return new MixedRealityPose(jointTransform.position, palmTransForm.rotation);
-                    }
-                }
-            }
-
-            return null;
-        }
-
-        private void ProcessPoseChange(MixedRealityPose? previousPose, MixedRealityPose? currentPose)
-        {
-            var delta = currentPose.Value.Position - previousPose.Value.Position;
-            var deltaRotation = Quaternion.FromToRotation(previousPose.Value.Forward, currentPose.Value.Forward);
-            gameObject.transform.position += delta;
-            gameObject.transform.rotation *= deltaRotation;
-        }
-
-        */
     }
 }

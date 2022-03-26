@@ -44,7 +44,7 @@ namespace VRKeys {
 		public bool autoInit = false;
 
 		private bool isPressing = false;
-		private bool isIndicating = false;
+		public bool isIndicating = false;
 
 		private bool disabled = false;
 
