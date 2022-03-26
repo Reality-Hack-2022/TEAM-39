@@ -1,0 +1,9 @@
+sceneSetups:
+- path: Assets/Samples/Mixed Reality Toolkit Examples/2.7.3/Demos - HandTracking/Scenes/HandInteractionGestureEventsExample213.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Team39KeyboardTest.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
