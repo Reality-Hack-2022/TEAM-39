@@ -105,31 +105,31 @@ namespace VRKeys {
 
 			switch (keyGroup) {
 				case KeyGroup.YellowLeft:
-					meshRenderer.material.SetColor("_Color", Color.yellow);
+					meshRenderer.material.SetColor("_Color", new Color32(139, 238, 220, 255));
 					break;
 				case KeyGroup.YellowRight:
-					meshRenderer.material.SetColor("_Color", Color.yellow);
+					meshRenderer.material.SetColor("_Color", new Color32(139, 238, 220, 255));
 					break;
 				case KeyGroup.RedLeft:
-					meshRenderer.material.SetColor("_Color", Color.red);
+					meshRenderer.material.SetColor("_Color", new Color32(255, 228, 131, 255));
 					break;
 				case KeyGroup.RedRight:
-					meshRenderer.material.SetColor("_Color", Color.red);
+					meshRenderer.material.SetColor("_Color", new Color32(255, 228, 131, 255));
 					break;
 				case KeyGroup.GreenLeft:
-					meshRenderer.material.SetColor("_Color", Color.green);
+					meshRenderer.material.SetColor("_Color", new Color32(255, 188, 151, 255));
 					break;
 				case KeyGroup.GreenMiddle:
-					meshRenderer.material.SetColor("_Color", Color.green);
+					meshRenderer.material.SetColor("_Color", new Color32(255, 188, 151, 255));
 					break;
 				case KeyGroup.GreenRight:
-					meshRenderer.material.SetColor("_Color", Color.green);
+					meshRenderer.material.SetColor("_Color", new Color32(255, 188, 151, 255));
 					break;
 				case KeyGroup.BlueLeft:
-					meshRenderer.material.SetColor("_Color", Color.blue);
+					meshRenderer.material.SetColor("_Color", new Color32(176, 203, 255, 255));
 					break;
 				case KeyGroup.BlueRight:
-					meshRenderer.material.SetColor("_Color", Color.blue);
+					meshRenderer.material.SetColor("_Color", new Color32(176, 203, 255, 255));
 					break;
 				case KeyGroup.Default:
 					meshRenderer.material.SetColor("_Color", Color.gray);
