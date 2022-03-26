@@ -8,6 +8,7 @@ using VRKeys;
 
 namespace DyiPinchGrab
 {
+
     public class DyiHandManipulation : MonoBehaviour
     {
         MixedRealityPose pose;
@@ -26,6 +27,7 @@ namespace DyiPinchGrab
 
         bool leftGesture = false;
         bool rightGesture = false;
+
 
         [SerializeField]
         public UnityEvent leftIndex;

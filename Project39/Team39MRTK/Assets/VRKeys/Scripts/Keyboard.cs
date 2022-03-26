@@ -133,6 +133,8 @@ namespace VRKeys {
 
 		private LetterKey[] keys;
 
+		public SpaceKey spaceKey;
+
 		private bool shifted = false;
 
 		private Layout layout;
@@ -497,6 +499,8 @@ namespace VRKeys {
 				}
 			}
 
+			//spaceKey.Init(new Vector3(0.125f, -4.470348e-08f, -0.34f));
+
 			keys = new LetterKey[layout.TotalKeys ()];
 			int keyCount = 0;
 
@@ -675,6 +679,7 @@ namespace VRKeys {
 			if (finger == 4 && currentRow != finger + 5)
             {
 				AddCharacter(" ");
+				//spaceKey.Indicate(true);
             }
 			foreach (LetterKey key in keys) {
 				if (key.isIndicating && key.keyRow == (finger - 5))
@@ -692,6 +697,7 @@ namespace VRKeys {
 					AddCharacter (key.label.text);
 				}
 			}
+			//spaceKey.Indicate(false);
 			currentRow = -1;
 		}
 

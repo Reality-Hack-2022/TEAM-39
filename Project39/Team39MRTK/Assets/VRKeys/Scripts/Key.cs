@@ -132,7 +132,7 @@ namespace VRKeys {
 					meshRenderer.material.SetColor("_Color", new Color32(176, 203, 255, 255));
 					break;
 				case KeyGroup.Default:
-					meshRenderer.material.SetColor("_Color", Color.gray);
+					meshRenderer.material.SetColor("_Color", new Color32(229, 229, 229, 255));
 					break;
 				default:
 					break;
