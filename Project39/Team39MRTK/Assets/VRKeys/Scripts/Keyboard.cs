@@ -660,13 +660,15 @@ namespace VRKeys {
 					key.Indicate(false);
 				}
 			}
+			currentKeyGroup = KeyGroup.Default;
 		}
 
 		public void IndicateRowPress(int finger) {
 
 			foreach (LetterKey key in keys) {
-				if (key.keyGroup == currentKeyGroup && key.keyRow == finger + 1) key.IndicatePress(true);
+				if (key.keyGroup == currentKeyGroup && key.keyRow == finger - 5) key.IndicatePress(true);
 			}
+			currentRow = finger - 5;
 		}
 		public void IndicateRowRelease() {
 			foreach (LetterKey key in keys) {
@@ -675,6 +677,7 @@ namespace VRKeys {
 					AddCharacter (key.label.text);
 				}
 			}
+			currentRow = -1;
 		}
 
 		public void ResetRow() {

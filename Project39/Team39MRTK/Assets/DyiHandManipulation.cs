@@ -51,7 +51,7 @@ namespace DyiPinchGrab
         public UnityEvent leftIndex;
         private void Update()
         {
-            //Debug.Log("Update");
+            if (leftFingerFrameCount == 15) Debug.Log("Left hand finger " + lastLeftFinger + " gesture");
 
             double[] fingerCurls = new double[8];
             double threshold = 0.3;
@@ -107,6 +107,7 @@ namespace DyiPinchGrab
             {
                 lastLeftFinger = maxLeftFinger;
                 leftFingerFrameCount = 0;
+                Debug.Log("left finger change to " + lastLeftFinger);
             }
 
             if (lastRightFinger == maxRightFinger)
@@ -117,6 +118,7 @@ namespace DyiPinchGrab
             {
                 lastRightFinger = maxRightFinger;
                 rightFingerFrameCount = 0;
+                Debug.Log("right finger change to " + lastRightFinger);
             }
 
 
@@ -127,7 +129,7 @@ namespace DyiPinchGrab
                 if (leftFingerFrameCount >= 15)
                 {
                     // moves up column
-                    if (maxLeftFinger >= 4) keyboard.IndicatePress(maxLeftFinger);
+                    keyboard.IndicatePress(maxLeftFinger);
                 }
             } else
             {
@@ -137,6 +139,7 @@ namespace DyiPinchGrab
                     if (leftFingerFrameCount >= 15)
                     {
                         Debug.Log("no curl");
+                        keyboard.IndicateRelease();
                     }
                 } else
                 {
@@ -150,7 +153,7 @@ namespace DyiPinchGrab
                 if (rightFingerFrameCount >= 15)
                 {
                     // if column indicated, indicate row
-                    if (maxRightFinger >= 4) keyboard.IndicateRowPress(maxRightFinger);
+                    keyboard.IndicateRowPress(maxRightFinger);
                 }
             }
             else
@@ -162,6 +165,7 @@ namespace DyiPinchGrab
                     if (rightFingerFrameCount >= 15)
                     {
                         Debug.Log("no curl");
+                        keyboard.IndicateRowRelease();
                     }
                 }
                 else

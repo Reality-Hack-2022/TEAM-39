@@ -80,9 +80,9 @@ namespace VRKeys {
 				return KeyGroup.GreenMiddle;
 			} else if (label.text == "u" || label.text == "j" || label.text == "m") {
 				return KeyGroup.GreenRight;
-			} else if (label.text == "i" || label.text == "k") {
+			} else if (label.text == "i" || label.text == "k" || label.text == "p") {
 				return KeyGroup.BlueLeft;
-			} else if (label.text == "o" || label.text == "l" || label.text == "p") {
+			} else if (label.text == "o" || label.text == "l") {
 				return KeyGroup.BlueRight;
 			}
 			return KeyGroup.Default;
@@ -306,7 +306,7 @@ namespace VRKeys {
 				isIndicating = true;
 				updatePosition();
 			} else {
-				yield return new WaitForSeconds (2f);
+				yield return new WaitForSeconds (0.1f);
 				isIndicating = false;
 				updatePosition();
 				keyboard.ResetKeyGroup();
@@ -326,7 +326,7 @@ namespace VRKeys {
 				isPressing = true;
 				updatePosition();
 			} else {
-				yield return new WaitForSeconds (2f);
+				yield return new WaitForSeconds (0.1f);
 				isPressing = false;
 				updatePosition();
 				keyboard.ResetRow();

@@ -5,21 +5,295 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637838508239023932
-    m_Hash: 944992288
+      ticks: 637838971283679827
+    m_Hash: 2832249550
   m_LockFileStatus:
     m_FilePath: C:/Users/Fanxuan/Documents/github/TEAM-39/Project39/Team39MRTK/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637838508305288115
+      ticks: 637838971283739430
     m_Hash: 3022648427
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.microsoft.mixedreality.toolkit.examples@file:C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.examples-2.7.3.tgz
+      testable: 0
+      isDirectDependency: 1
+      version: 2.7.3
+      source: 6
+      resolvedPath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Library\PackageCache\com.microsoft.mixedreality.toolkit.examples@a7c46e9e4c9e-1648300073239
+      assetPath: Packages/com.microsoft.mixedreality.toolkit.examples
+      name: com.microsoft.mixedreality.toolkit.examples
+      displayName: Mixed Reality Toolkit Examples
+      author:
+        name: Microsoft
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Example scenes and assets for the Microsoft Mixed Reality Toolkit.
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.microsoft.mixedreality.toolkit.foundation
+        version: 2.7.3
+      - name: com.microsoft.mixedreality.toolkit.extensions
+        version: 2.7.3
+      resolvedDependencies:
+      - name: com.microsoft.mixedreality.toolkit.foundation
+        version: 2.7.3
+      - name: com.microsoft.mixedreality.toolkit.standardassets
+        version: 2.7.3
+      - name: com.unity.textmeshpro
+        version: 3.0.6
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.microsoft.mixedreality.toolkit.extensions
+        version: 2.7.3
+      keywords:
+      - mrtk
+      - microsoft
+      - mixed
+      - reality
+      - augmented
+      - virtual
+      - xr
+      - hololens
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
+        revision: 
+        path: 
+    - packageId: com.microsoft.mixedreality.toolkit.extensions@file:C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.extensions-2.7.3.tgz
+      testable: 0
+      isDirectDependency: 1
+      version: 2.7.3
+      source: 6
+      resolvedPath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Library\PackageCache\com.microsoft.mixedreality.toolkit.extensions@76448bec64fb-1648300069590
+      assetPath: Packages/com.microsoft.mixedreality.toolkit.extensions
+      name: com.microsoft.mixedreality.toolkit.extensions
+      displayName: Mixed Reality Toolkit Extensions
+      author:
+        name: Microsoft
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Extensions to the Microsoft Mixed Reality Toolkit. This package
+        includes: Hand Physics Service, Lost Tracking Service and Scene Transition
+        Service.'
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.microsoft.mixedreality.toolkit.foundation
+        version: 2.7.3
+      resolvedDependencies:
+      - name: com.microsoft.mixedreality.toolkit.foundation
+        version: 2.7.3
+      - name: com.microsoft.mixedreality.toolkit.standardassets
+        version: 2.7.3
+      - name: com.unity.textmeshpro
+        version: 3.0.6
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - mrtk
+      - microsoft
+      - mixed
+      - reality
+      - augmented
+      - virtual
+      - hololens
+      - xr
+      - extensions
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
+        revision: 
+        path: 
+    - packageId: com.microsoft.mixedreality.toolkit.foundation@file:C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.7.3.tgz
+      testable: 0
+      isDirectDependency: 1
+      version: 2.7.3
+      source: 6
+      resolvedPath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Library\PackageCache\com.microsoft.mixedreality.toolkit.foundation@94556b642701-1648300070122
+      assetPath: Packages/com.microsoft.mixedreality.toolkit.foundation
+      name: com.microsoft.mixedreality.toolkit.foundation
+      displayName: Mixed Reality Toolkit Foundation
+      author:
+        name: Microsoft
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The Mixed Reality Toolkit a set of foundational components and
+        features to accelerate mixed reality app development in Unity.
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.microsoft.mixedreality.toolkit.standardassets
+        version: 2.7.3
+      resolvedDependencies:
+      - name: com.microsoft.mixedreality.toolkit.standardassets
+        version: 2.7.3
+      - name: com.unity.textmeshpro
+        version: 3.0.6
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - mrtk
+      - microsoft
+      - mixed
+      - reality
+      - augmented
+      - virtual
+      - xr
+      - hololens
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
+        revision: 
+        path: 
+    - packageId: com.microsoft.mixedreality.toolkit.standardassets@file:C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.standardassets-2.7.3.tgz
+      testable: 0
+      isDirectDependency: 1
+      version: 2.7.3
+      source: 6
+      resolvedPath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Library\PackageCache\com.microsoft.mixedreality.toolkit.standardassets@a1162e553c7e-1648300069579
+      assetPath: Packages/com.microsoft.mixedreality.toolkit.standardassets
+      name: com.microsoft.mixedreality.toolkit.standardassets
+      displayName: Mixed Reality Toolkit Standard Assets
+      author:
+        name: Microsoft
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Mixed Reality Toolkit standard assets, including; shaders, common
+        materials and fonts.
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.unity.textmeshpro
+        version: 2.1.4
+      resolvedDependencies:
+      - name: com.unity.textmeshpro
+        version: 3.0.6
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - mrtk
+      - microsoft
+      - mixed
+      - reality
+      - augmented
+      - virtual
+      - xr
+      - hololens
+      - assets
+      - standardassets
+      - coreassets
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
+        revision: 
+        path: 
     - packageId: com.unity.collab-proxy@1.15.12
       testable: 0
       isDirectDependency: 1
@@ -2695,280 +2969,6 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.microsoft.mixedreality.toolkit.examples@file:C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.examples-2.7.3.tgz
-      testable: 0
-      isDirectDependency: 1
-      version: 2.7.3
-      source: 6
-      resolvedPath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Library\PackageCache\com.microsoft.mixedreality.toolkit.examples@a7c46e9e4c9e-1648254020203
-      assetPath: Packages/com.microsoft.mixedreality.toolkit.examples
-      name: com.microsoft.mixedreality.toolkit.examples
-      displayName: Mixed Reality Toolkit Examples
-      author:
-        name: Microsoft
-        email: 
-        url: 
-      category: 
-      type: 
-      description: Example scenes and assets for the Microsoft Mixed Reality Toolkit.
-      status: 4
-      errors: []
-      versions:
-        all: []
-        compatible: []
-        verified: 
-      dependencies:
-      - name: com.microsoft.mixedreality.toolkit.foundation
-        version: 2.7.3
-      - name: com.microsoft.mixedreality.toolkit.extensions
-        version: 2.7.3
-      resolvedDependencies:
-      - name: com.microsoft.mixedreality.toolkit.foundation
-        version: 2.7.3
-      - name: com.microsoft.mixedreality.toolkit.standardassets
-        version: 2.7.3
-      - name: com.unity.textmeshpro
-        version: 3.0.6
-      - name: com.unity.ugui
-        version: 1.0.0
-      - name: com.unity.modules.ui
-        version: 1.0.0
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      - name: com.microsoft.mixedreality.toolkit.extensions
-        version: 2.7.3
-      keywords:
-      - mrtk
-      - microsoft
-      - mixed
-      - reality
-      - augmented
-      - virtual
-      - xr
-      - hololens
-      registry:
-        id: 
-        name: 
-        url: 
-        scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 0
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
-        revision: 
-        path: 
-    - packageId: com.microsoft.mixedreality.toolkit.foundation@file:C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.7.3.tgz
-      testable: 0
-      isDirectDependency: 1
-      version: 2.7.3
-      source: 6
-      resolvedPath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Library\PackageCache\com.microsoft.mixedreality.toolkit.foundation@94556b642701-1648254013902
-      assetPath: Packages/com.microsoft.mixedreality.toolkit.foundation
-      name: com.microsoft.mixedreality.toolkit.foundation
-      displayName: Mixed Reality Toolkit Foundation
-      author:
-        name: Microsoft
-        email: 
-        url: 
-      category: 
-      type: 
-      description: The Mixed Reality Toolkit a set of foundational components and
-        features to accelerate mixed reality app development in Unity.
-      status: 4
-      errors: []
-      versions:
-        all: []
-        compatible: []
-        verified: 
-      dependencies:
-      - name: com.microsoft.mixedreality.toolkit.standardassets
-        version: 2.7.3
-      resolvedDependencies:
-      - name: com.microsoft.mixedreality.toolkit.standardassets
-        version: 2.7.3
-      - name: com.unity.textmeshpro
-        version: 3.0.6
-      - name: com.unity.ugui
-        version: 1.0.0
-      - name: com.unity.modules.ui
-        version: 1.0.0
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      keywords:
-      - mrtk
-      - microsoft
-      - mixed
-      - reality
-      - augmented
-      - virtual
-      - xr
-      - hololens
-      registry:
-        id: 
-        name: 
-        url: 
-        scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 0
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
-        revision: 
-        path: 
-    - packageId: com.microsoft.mixedreality.toolkit.extensions@file:C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.extensions-2.7.3.tgz
-      testable: 0
-      isDirectDependency: 1
-      version: 2.7.3
-      source: 6
-      resolvedPath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Library\PackageCache\com.microsoft.mixedreality.toolkit.extensions@76448bec64fb-1648254008931
-      assetPath: Packages/com.microsoft.mixedreality.toolkit.extensions
-      name: com.microsoft.mixedreality.toolkit.extensions
-      displayName: Mixed Reality Toolkit Extensions
-      author:
-        name: Microsoft
-        email: 
-        url: 
-      category: 
-      type: 
-      description: 'Extensions to the Microsoft Mixed Reality Toolkit. This package
-        includes: Hand Physics Service, Lost Tracking Service and Scene Transition
-        Service.'
-      status: 4
-      errors: []
-      versions:
-        all: []
-        compatible: []
-        verified: 
-      dependencies:
-      - name: com.microsoft.mixedreality.toolkit.foundation
-        version: 2.7.3
-      resolvedDependencies:
-      - name: com.microsoft.mixedreality.toolkit.foundation
-        version: 2.7.3
-      - name: com.microsoft.mixedreality.toolkit.standardassets
-        version: 2.7.3
-      - name: com.unity.textmeshpro
-        version: 3.0.6
-      - name: com.unity.ugui
-        version: 1.0.0
-      - name: com.unity.modules.ui
-        version: 1.0.0
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      keywords:
-      - mrtk
-      - microsoft
-      - mixed
-      - reality
-      - augmented
-      - virtual
-      - hololens
-      - xr
-      - extensions
-      registry:
-        id: 
-        name: 
-        url: 
-        scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 0
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
-        revision: 
-        path: 
-    - packageId: com.microsoft.mixedreality.toolkit.standardassets@file:C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.standardassets-2.7.3.tgz
-      testable: 0
-      isDirectDependency: 1
-      version: 2.7.3
-      source: 6
-      resolvedPath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Library\PackageCache\com.microsoft.mixedreality.toolkit.standardassets@a1162e553c7e-1648254012225
-      assetPath: Packages/com.microsoft.mixedreality.toolkit.standardassets
-      name: com.microsoft.mixedreality.toolkit.standardassets
-      displayName: Mixed Reality Toolkit Standard Assets
-      author:
-        name: Microsoft
-        email: 
-        url: 
-      category: 
-      type: 
-      description: Mixed Reality Toolkit standard assets, including; shaders, common
-        materials and fonts.
-      status: 4
-      errors: []
-      versions:
-        all: []
-        compatible: []
-        verified: 
-      dependencies:
-      - name: com.unity.textmeshpro
-        version: 2.1.4
-      resolvedDependencies:
-      - name: com.unity.textmeshpro
-        version: 3.0.6
-      - name: com.unity.ugui
-        version: 1.0.0
-      - name: com.unity.modules.ui
-        version: 1.0.0
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      keywords:
-      - mrtk
-      - microsoft
-      - mixed
-      - reality
-      - augmented
-      - virtual
-      - xr
-      - hololens
-      - assets
-      - standardassets
-      - coreassets
-      registry:
-        id: 
-        name: 
-        url: 
-        scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 0
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
-        revision: 
-        path: 
     - packageId: com.unity.modules.subsystems@1.0.0
       testable: 0
       isDirectDependency: 0
@@ -3518,22 +3518,8 @@ m_PackageAssets:
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 637838508202034758
+        ticks: 637838968732393595
       m_Hash: 3612649047
-    - m_FilePath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.7.3.tgz/package.json
-      m_PathExists: 0
-      m_ContentTrackingEnabled: 1
-      m_ModificationDate:
-        serializedVersion: 2
-        ticks: 0
-      m_Hash: 0
-    - m_FilePath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.7.3.tgz
-      m_PathExists: 1
-      m_ContentTrackingEnabled: 1
-      m_ModificationDate:
-        serializedVersion: 2
-        ticks: 637838508139023330
-      m_Hash: 3313935279
     - m_FilePath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.extensions-2.7.3.tgz/package.json
       m_PathExists: 0
       m_ContentTrackingEnabled: 1
@@ -3546,8 +3532,22 @@ m_PackageAssets:
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 637838508089310314
+        ticks: 637838968695902577
       m_Hash: 3675552526
+    - m_FilePath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.7.3.tgz/package.json
+      m_PathExists: 0
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 0
+      m_Hash: 0
+    - m_FilePath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.7.3.tgz
+      m_PathExists: 1
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 637838968701224267
+      m_Hash: 3313935279
     - m_FilePath: C:\Users\Fanxuan\Documents\github\TEAM-39\Project39\Team39MRTK\Packages\MixedReality\com.microsoft.mixedreality.toolkit.standardassets-2.7.3.tgz/package.json
       m_PathExists: 0
       m_ContentTrackingEnabled: 1
@@ -3560,7 +3560,7 @@ m_PackageAssets:
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 637838508122251870
+        ticks: 637838968695789675
       m_Hash: 418450698
 m_ProjectPath: C:/Users/Fanxuan/Documents/github/TEAM-39/Project39/Team39MRTK/Packages
 m_EditorVersion: 2020.3.29f1 (2ff179115da0)
